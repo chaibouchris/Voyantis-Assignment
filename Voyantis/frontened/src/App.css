@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4E44CE, #D63384);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 90%;
+  z-index: 10;
+}
+
+.create-queue, .queue-list, .message-controls {
+  margin: 20px auto;
+  width: 50%;
+  text-align: left;
+}
+
+.queue-list ul {
+  list-style-type: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.queue-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.queue-list li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+.selected-queue {
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid #D63384;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #D63384, #A02463);
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #A02463, #D63384);
+  transform: translateY(-2px);
+}
+
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #D63384;
+  border-radius: 4px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+input::placeholder {
+  color: #f5c6e8;
+}
+
+.go-button-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  animation: fadeOut 3s forwards;
+  text-align: center;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
